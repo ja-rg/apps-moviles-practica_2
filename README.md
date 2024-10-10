@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# Aplicación Móvil - Autenticación con React Native y Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Descripción
 
-## Get started
+Esta es una aplicación móvil básica desarrollada en **React Native con Expo**, que permite a los usuarios:
 
-1. Install dependencies
+- Registrarse (pantalla de registro)
+- Iniciar sesión (pantalla de login)
+- Ver su perfil (pantalla de perfil)
+- Cambiar la foto de perfil (pantalla de perfil)
+
+La aplicación se comunica con una **REST API** basada en PHP a través de puntos de acceso como `register.php` y `login.php`. Se valida cualquier error que ocurra durante el proceso de registro, inicio de sesión, y actualización de perfil.
+
+## Requisitos
+
+- Node.js (>= 12.x)
+- Expo CLI (https://expo.dev/)
+- Editor de código (como Visual Studio Code)
+- Conexión a una REST API que maneje el registro y la autenticación (`register.php` y `login.php`)
+
+## Instalación
+
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd nombre-del-proyecto
+   ```
+
+2. **Instalar dependencias**
+
+   Asegúrate de tener `expo-cli` instalado globalmente:
+
+   ```bash
+   npm install -g expo-cli
+   ```
+
+   Luego, instala las dependencias del proyecto:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Iniciar el proyecto con Expo**
 
    ```bash
-    npx expo start
+   expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Ejecutar en un emulador o dispositivo físico**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   Usa la aplicación de Expo Go en un dispositivo físico, o selecciona un emulador desde el menú que ofrece Expo.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Estructura del Proyecto
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Pantallas**:
+  - `LoginScreen.js`: Pantalla para que los usuarios inicien sesión.
+  - `RegisterScreen.js`: Pantalla para que los usuarios se registren.
+  - `ProfileScreen.js`: Pantalla donde los usuarios pueden ver y actualizar su información, incluida la foto de perfil.
+  
+- **Servicios**:
+  - `api.js`: Manejador de llamadas a la API, que realiza las solicitudes HTTP `POST` a las rutas `login.php` y `register.php`.
