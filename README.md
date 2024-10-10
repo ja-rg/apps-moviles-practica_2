@@ -23,7 +23,7 @@ La aplicación se comunica con una **REST API** basada en PHP a través de punto
 1. **Clonar el repositorio**
 
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/ja-rg/apps-moviles-practica_2.git
    cd nombre-del-proyecto
    ```
 
