@@ -3,10 +3,6 @@ import { Stack } from 'expo-router';
 
 
 export default function RootLayout() {
-  useFonts({
-    'IndivisaTextSans': require('@/assets/fonts/IndivisaTextSans-Regular.ttf'),
-  });
-
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

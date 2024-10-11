@@ -21,14 +21,18 @@ export default function TabLayout() {
                 },
                 tabBarLabelStyle: {
                     fontFamily: 'IndivisaTextSans',
+                }, 
+                // icon in the header
+                tabBarIconStyle: {
+                    display: 'flex',
                 },
             }}
         >
 
             <Tabs.Screen
-                name="home"
+                name="register"
                 options={{
-                    title: 'Menú principal',
+                    title: 'Registro de usuarios',
                     headerStyle: {
                         backgroundColor: '#001d68',
                     },
@@ -37,16 +41,23 @@ export default function TabLayout() {
                         fontFamily: 'IndivisaTextSans',
                     },
                     tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
+                        <Ionicons name={focused ? 'person-add' : 'person-add-outline'} color={color} size={24} />
                     ),
                 }}
             />
             <Tabs.Screen
                 name="login"
                 options={{
-                    title: 'Login',
+                    title: 'Inicio de sesión',
+                    headerStyle: {
+                        backgroundColor: '#001d68',
+                    },
+                    headerTitleStyle: {
+                        color: '#fff',
+                        fontFamily: 'IndivisaTextSans',
+                    },
                     tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
+                        <Ionicons name={focused ? 'log-in' : 'log-in-outline'} color={color} size={24} />
                     ),
                 }}
             />
